@@ -1,0 +1,24 @@
+@-moz-document url("about:home"), url("about:newtab") {
+  /* remove Firefox logo */
+  .search-wrapper {
+    display: none !important;
+  }
+  /* remove customize button */
+
+  .personalizeButtonWrapper {
+    display: none;
+  }
+
+  /* change background img */
+  body {
+    background-image: url("./img.png") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-position-x: center !important;
+    background-position-y: bottom !important;
+  }
+  .ds-top-sites {
+    margin-top: 60% !important;
+  }
+}

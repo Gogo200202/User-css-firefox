@@ -1,8 +1,12 @@
 @-moz-document url("about:home"), url("about:newtab") {
+  :root {
+    --color-accent-primary: none !important;
+  }
   /* remove Firefox logo */
-  .search-wrapper {
+  .logo-and-wordmark {
     display: none !important;
   }
+
   /* remove customize button */
 
   .personalizeButtonWrapper {
@@ -10,6 +14,7 @@
   }
 
   /* change background img */
+
   body {
     background-image: url("./img.png") !important;
     background-size: cover !important;
@@ -18,7 +23,25 @@
     background-position-x: center !important;
     background-position-y: bottom !important;
   }
+
+  /* move short cuts row lower */
   .ds-top-sites {
     margin-top: 60% !important;
+  }
+  /* remove background color and border shadow from icons */
+  .tile {
+    background-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: none !important;
+    height: auto !important;
+  }
+
+  .top-site-outer:hover {
+    width: auto;
+    transition: transform 0.2s !important; /* Animation */
+    transform: scale(1.5) !important;
+  }
+
+  .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) {
+    background: none !important;
   }
 }
